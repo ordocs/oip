@@ -1,0 +1,11 @@
+<pre>
+  OIP: 0004
+  Title: Arbitrary Data Storage w/ SegWit
+  Author: Psifour [psifour@luxor.tech]
+  Comments-Summary: No comments yet.
+  Comments-URI: No discussion space allocated.
+  Status: Draft
+  Type: Protocol
+  Created: 2023-05-28
+  License: PD
+</pre>
