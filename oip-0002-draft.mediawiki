@@ -1,0 +1,23 @@
+<pre>
+  OIP: 0002
+  Title: Ordinal Improvement Proposal (OIP)
+  Author: Psifour [psifour@luxor.tech]
+  Comments-Summary: No comments yet.
+  Comments-URI: No discussion space allocated.
+  Status: Draft
+  Type: Process
+  Created: 2023-05-28
+  License: PD
+</pre>
+
+== What is an OIP ==
+
+OIP stands for Ordinal Improvement Proposal. A OIP is a design document providing information to the Bitcoin community, or describing a new feature for Bitcoin or its processes or environment. The OIP should provide a concise technical specification of the feature and a rationale for the feature.
+
+We intend OIPs to be the primary mechanisms for proposing new features, for collecting community input on an issue, and for documenting the design decisions that have gone into Ordinals. The OIP author is responsible for building consensus within the community and documenting dissenting opinions.
+
+Because the OIPs are maintained as text files in a versioned repository, their revision history is the historical record of the feature proposal.
+
+=== Copyright ===
+
+This work is placed in the public domain.
