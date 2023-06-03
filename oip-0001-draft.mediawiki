@@ -5,9 +5,9 @@
   Comments-Summary: No comments yet.
   Comments-URI: https://github.com/ordinals/ord/discussions/126
   Status: Draft
-  Type: Protocol
+  Type: Standards
   Created: 2022-02-02
-  License: PD
+  License: CC0-1.0
 </pre>
 
 == Introduction ==
@@ -15,10 +15,6 @@
 === Abstract ===
 
 This document defines a scheme for assigning serial numbers to sats.
-
-=== Copyright ===
-
-This work is placed in the public domain.
 
 === Motivation ===
 
