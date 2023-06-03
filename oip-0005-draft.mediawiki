@@ -1,0 +1,15 @@
+<pre>
+  OIP: 0005
+  Title: Inscriptions
+  Author: Psifour [psifour@luxor.tech]
+  Comments-URI: https://github.com/ordocs/oip/issues/4
+  Status: Draft
+  Type: Standards
+  Created: 2023-05-28
+  License: CC0-1.0
+</pre>
+
+== Undrafted Core Concept ==
+
+This will be an extension of OIP4, that focuses solely on the reference implementation of 'ord'. As such it will be active at time of merge, but subject to changes as the Ordinal's Project moves forward with future developments.
+The goal is to have a strong example of how other projects/services/tools can utilzie the abstract structure defined in OIP4 to store data on-chain for their specific use-case.

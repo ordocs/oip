@@ -1,0 +1,229 @@
+<pre>
+  OIP: 0002
+  Title: Ordinal Improvement Proposal (OIP)
+  Author: Psifour [psifour@luxor.tech]
+  Comments-Summary: No comments yet.
+  Comments-URI: No discussion space allocated.
+  Status: Draft
+  Type: Process
+  Created: 2023-05-28
+  License: CC0-1.0
+</pre>
+
+== What is an OIP ==
+
+OIP stands for Ordinal Improvement Proposal. A OIP is a design document providing information to the Bitcoin community, or describing a new feature for Bitcoin or its processes or environment. The OIP should provide a concise technical specification of the feature and a rationale for the feature.
+
+We intend OIPs to be the primary mechanisms for proposing new features, for collecting community input on an issue, and for documenting the design decisions that have gone into Ordinals. The OIP author is responsible for building consensus within the community and documenting dissenting opinions.
+
+Because the OIPs are maintained as text files in a versioned repository, their revision history is the historical record of the feature proposal.
+
+== OIP Workflow ==
+
+The OIP process begins with a new idea for ordinals and/or arbitrary data storage. Each potential OIP must have an author; this individual (or organization) is responsible for complying with the standards and style defined below, facilitating community discussion, and developing/evaluation community support/consensus. Additionally, the author is responsible for determining if the OIP is sufficient in terms of depth or breadth to warrant inclusion, small enhancements or patches to a particular piece of software often don't require standardization between multiple projects; these don't need an OIP and should instead be included in the relevant project(s) existing workflow. A good first step is to verify that this proposal doesn't duplicate existing or past work and if it does what lessons can be learned from that. After investigating past work, the best way to proceed is by posting about the new idea in public channels such as GitHub issues or discussions.
+
+Once the author has sought feedback from the ordinals and arbitrary data storage community on the idea's potential acceptance, a draft OIP should be posted in public channels to further refine the proposal based on community feedback. This gives the author a chance to develop the draft OIP to make it properly formatted, of high quality, and to address additional concerns about the proposal. Following a discussion, the proposal should be submitted to the OIPs git repository as a pull request. This draft must be written in OIP style as described below, and named with an alias such as "oip-johndoe-proposaltitle" until an editor or other consensus mechanism has assigned it an OIP number (authors MUST NOT self-assign OIP numbers).
+
+OIP authors are responsible for collecting community feedback on both the initial idea and the OIP before submitting it for review. Strategies to keep the discussions efficient include: setting up a separate issue, discussion board, or even open-forum for the topic, accepting private comments in the early design phases, setting up a wiki page or git repository, etc. OIP authors should use their discretion here.
+
+It is highly recommended that a single OIP contain a single key proposal or new idea. If in doubt, split your OIP into several focused proposals. Doing so facilitates additional refinement of proposals during the community discussion stage without confusion with regards to which aspect is being modified.
+
+When the OIP draft is complete, an OIP editor or other consensus mechanism will assign the OIP a number, label it as Standards Track, Informational, or Process, and merge the pull request to the OIPs git repository. The OIP editors or other consensus mechanisms will not unreasonably reject an OIP. Reasons for rejecting OIPs include duplication of effort, disregard for formatting rules, being too unfocused or too broad, being technically unsound, or not providing proper motivation or addressing backwards compatibility. The proposed implementation, if applicable, must be solid and must not complicate the protocol unduly.
+
+The OIP author may update the draft as necessary in the git repository. Updates to drafts should also be submitted by the author as pull requests. The role of the editor or other consensus mechanism includes helping the author to manage these updates.
+
+Once an OIP has been accepted, the implementations must be completed. When the implementation is complete and adopted by the community, the status will be changed to 'Final'. An OIP can also be "Deferred", meaning that it is not being considered for immediate adoption. An OIP can be assigned status "Active" if it is a general standard that has been adopted but may still be updated over time.
+
+In summary, the OIP process involves a multi-stage workflow, including idea generation, public vetting and discussion, drafting of the proposal, review and assignment of the OIP number by an editor or other consensus mechanism, community feedback and possible revision, and finally, if all criteria are met, acceptance and implementation. This process ensures that all changes and enhancements to ordinals and associated arbitrary data storage mechanisms are carefully considered, thoroughly reviewed, and agreed upon by the community.
+
+=== OIP Editor(s) ===
+
+The current OIP editor(s) are:
+
+* Psifour (psifour@luxor.tech)
+
+However, moving forward, there is a need to transition from a centralized editor model to a decentralized consensus mechanism. This shift is important to ensure that the process of accepting and implementing new OIPs is more transparent, and in line with the fundamental principles of decentralized systems.
+The move towards a decentralized consensus mechanism is a significant evolution in the OIP process, and changes to this section should be expected as discussion/consensus is reached. Such a transition requires careful planning and implementation to ensure it effectively facilitates decision-making while maintaining the integrity of the OIP process.
+
+====OIP header preamble====
+
+Each OIP must begin with an RFC 822 style header preamble. The headers must appear in the following order. Headers marked with "*" are optional and are described below. All other headers are required.
+
+<pre>
+  OIP: <OIP number, or "?" before being assigned>
+  Title: <OIP title; maximum 44 characters>
+  Author: <list of authors' real names and email addrs>
+* Discussions-URI: <discussion link>
+  Comments-URI: <pull request link>
+  Status: <Draft | Active | Proposed | Deferred | Rejected |
+           Withdrawn | Final | Replaced | Obsolete>
+  Type: <Standards | Informational | Process>
+  Created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
+  License: <abbreviation for approved license(s)>
+* License-Code: <abbreviation for code under different approved license(s)>
+* Requires: <OIP number(s)>
+* Replaces: <OIP number>
+* Superseded-By: <OIP number>
+</pre>
+
+The Author header lists the names and email addresses of all the authors/owners of the OIP.
+The format of the Author header value must be
+  Random J. User <address@dom.ain>
+If there are multiple authors, each should be on a separate line following RFC 2822 continuation line conventions.
+
+While a OIP is in private discussions (usually during the initial Draft phase), a Discussions-To header will indicate the mailing list or URL where the OIP is being discussed. No Discussions-To header is necessary if the OIP is being discussed privately with the author.
+
+The Type header specifies the type of OIP: Standards, Informational, or Process.
+
+The Created header records the date that the OIP was assigned a number.
+Dates should be in yyyy-mm-dd format, e.g. 2001-08-14.
+Post-History is permitted to be a link to a specific thread in a mailing list archive.
+
+OIPs may have a Requires header, indicating the OIP numbers that this OIP depends on.
+
+OIPs may also have a Superseded-By header indicating that a OIP has been rendered obsolete by a later document; the value is the number of the OIP that replaces the current document. The newer OIP must have a Replaces header containing the number of the OIP that it rendered obsolete.
+
+====Auxiliary Files====
+
+OIPs may include auxiliary files such as diagrams. Auxiliary files should be included in a subdirectory for that OIP and must be named OIP-XXXX-Y.ext, where "XXXX" is the OIP number, "Y" is a serial number (starting at 1), and "ext" is replaced by the actual file extension (e.g. "png").
+
+==OIP types==
+
+There are three kinds of OIP:
+
+* A Standards OIP describes any change that affects most or all Bitcoin implementations, such as a change to the network protocol, a change in block or transaction validity rules, or any change or addition that affects the interoperability of applications using Bitcoin. Standards Track OIPs consist of two parts, a design document and a reference implementation.
+* An Informational OIP describes a Bitcoin design issue, or provides general guidelines or information to the Bitcoin community, but does not propose a new feature. Informational OIPs do not necessarily represent a Bitcoin community consensus or recommendation, so users and implementors are free to ignore Informational OIPs or follow their advice.
+* A Process OIP describes a process surrounding Bitcoin, or proposes a change to (or an event in) a process. Process OIPs are like Standards Track OIPs but apply to areas other than the Bitcoin protocol itself. They may propose an implementation, but not to Bitcoin's codebase; they often require community consensus; unlike Informational OIPs, they are more than recommendations, and users are typically not free to ignore them. Examples include procedures, guidelines, changes to the decision-making process, and changes to the tools or environment used in Bitcoin development. Any meta-OIP is also considered a Process OIP.
+
+==OIP status field==
+
+===Specification===
+
+The typical paths of the status of OIPs are as follows:
+
+Champions of a OIP may decide on their own to change the status between Draft, Deferred, or Withdrawn.
+A OIP editor may also change the status to Deferred when no progress is being made on the OIP.
+
+A OIP may only change status from Draft (or Rejected) to Proposed, when the author deems it is complete, has a working implementation (where applicable), and has community plans to progress it to the Final status.
+
+OIPs should be changed from Draft or Proposed status, to Rejected status, upon request by any person, if they have not made progress in three years. Such a OIP may be changed to Draft status if the champion provides revisions that meaningfully address public criticism of the proposal, or to Proposed status if it meets the criteria required as described in the previous paragraph.
+
+A Proposed OIP may progress to Final only when specific criteria reflecting real-world adoption has occurred. This is different for each OIP depending on the nature of its proposed changes, which will be expanded on below. Evaluation of this status change should be objectively verifiable, and/or be discussed on the development mailing list.
+
+When a Final OIP is no longer relevant, its status may be changed to Replaced or Obsolete (which is equivalent to Replaced). This change must also be objectively verifiable and/or discussed.
+
+A process OIP may change status from Draft to Active when it achieves rough consensus on the mailing list. Such a proposal is said to have rough consensus if it has been open to discussion on the development mailing list for at least one month, and no person maintains any unaddressed substantiated objections to it. Addressed or obstructive objections may be ignored/overruled by general agreement that they have been sufficiently addressed, but clear reasoning must be given in such circumstances.
+
+====Progression to Final status====
+
+Software authors are encouraged to publish summaries of what OIPs their software supports to aid in verification of status changes. Good examples of this at the time of writing this OIP, can be observed in [https://github.com/bitcoin/bitcoin/blob/master/doc/OIPs.md Bitcoin Core's doc/OIPs.md file] as well as [https://github.com/bitcoin-wallet/bitcoin-wallet/blob/master/wallet/README.specs.md Bitcoin Wallet for Android's wallet/README.specs.md file].
+These criteria are considered objective ways to observe the de facto adoption of the OIP, and are not to be used as reasons to oppose or reject a OIP. Should a OIP become actually and unambiguously adopted despite not meeting the criteria outlined here, it should still be updated to Final status.
+
+===Rationale===
+
+Why is it necessary for at least two software projects to release an implementation of API/RPC and application layer OIPs, before they become Final?
+
+* If there is only one implementation of a specification, there is no other program for which a standard interface is used with or needed.
+* Even if there are only two projects rather than more, some standard coordination between them exists.
+
+What if a OIP is proposed that only makes sense for a single specific project?
+
+* The OIP process exists for standardisation between independent projects. If something only affects one project, it should be done through that project's own internal processes, and never be proposed as a OIP in the first place.
+
+==OIP comments==
+
+===Specification===
+
+Undefined
+
+===Rationale===
+
+What is the purpose of OIP comments?
+
+* Some may regard OIPs as a "good idea" simply by virtue of them being assigned a OIP number. Due to the low barrier of entry for submission of new OIPs, it seems advisable for a way for reviewers to express their opinions on them in a way that is consumable to the public without needing to review the entire development discussion.
+
+Will OIP comments be censored or limited to particular participants/"experts"?
+
+* Participants should freely refrain from commenting outside of their area of knowledge or expertise. However, comments should not be censored, and participation should be open to the public.
+
+==OIP licensing==
+
+===Specification===
+
+New OIPs may be accepted with the following licenses. Each new OIP must identify at least one acceptable license in its preamble. The License header in the preamble must be placed after the Created header. Each license must be referenced by their respective abbreviation given below.
+
+For example, a preamble might include the following License header:
+
+    License: BSD-2-Clause
+             GNU-All-Permissive
+
+In this case, the OIP text is fully licensed under both the OSI-approved BSD 2-clause license as well as the GNU All-Permissive License, and anyone may modify and redistribute the text provided they comply with the terms of *either* license. In other words, the license list is an "OR choice", not an "AND also" requirement.
+
+It is also possible to license source code differently from the OIP text. An optional License-Code header is placed after the License header. Again, each license must be referenced by their respective abbreviation given below.
+
+For example, a preamble specifying the optional License-Code header might look like:
+
+    License: BSD-2-Clause
+             GNU-All-Permissive
+    License-Code: GPL-2.0+
+
+In this case, the code in the OIP is not available under the BSD or All-Permissive licenses, but only under the terms of the GNU General Public License (GPL), version 2 or newer.
+If the code were to be available under *only* version 2 exactly, the "+" symbol should be removed from the license abbreviation.
+For a later version (eg, GPL 3.0), you would increase the version number (and retain or remove the "+" depending on intent).
+
+    License-Code: GPL-2.0   # This refers to GPL v2.0 *only*, no later license versions are acceptable.
+    License-Code: GPL-2.0+  # This refers to GPL v2.0 *or later*.
+    License-Code: GPL-3.0   # This refers to GPL v3.0 *only*, no later license versions are acceptable.
+    License-Code: GPL-3.0+  # This refers to GPL v3.0 *or later*.
+
+In the event that the licensing for the text or code is too complicated to express with a simple list of alternatives, the list should instead be replaced with the single term "Complex". In all cases, details of the licensing terms must be provided in the Copyright section of the OIP.
+
+OIPs are not required to be *exclusively* licensed under approved terms, and may also be licensed under unacceptable licenses *in addition to* at least one acceptable license.
+In this case, only the acceptable license(s) should be listed in the License and License-Code headers.
+
+====Recommended licenses====
+
+* BSD-2-Clause: [https://opensource.org/licenses/BSD-2-Clause OSI-approved BSD 2-clause license]
+* BSD-3-Clause: [https://opensource.org/licenses/BSD-3-Clause OSI-approved BSD 3-clause license]
+* CC0-1.0: [https://creativecommons.org/publicdomain/zero/1.0/ Creative Commons CC0 1.0 Universal]
+* GNU-All-Permissive: [http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html GNU All-Permissive License]
+
+In addition, it is recommended that literal code included in the OIP be dual-licensed under the same license terms as the project it modifies. For example, literal code intended for Bitcoin Core would ideally be dual-licensed under the MIT license terms as well as one of the above with the rest of the OIP text.
+
+====Not recommended, but acceptable licenses====
+
+* Apache-2.0: [http://www.apache.org/licenses/LICENSE-2.0 Apache License, version 2.0]
+* BSL-1.0: [http://www.boost.org/LICENSE_1_0.txt Boost Software License, version 1.0]
+* CC-BY-4.0: [https://creativecommons.org/licenses/by/4.0/ Creative Commons Attribution 4.0 International]
+* CC-BY-SA-4.0: [https://creativecommons.org/licenses/by-sa/4.0/ Creative Commons Attribution-ShareAlike 4.0 International]
+* MIT: [https://opensource.org/licenses/MIT Expat/MIT/X11 license]
+* AGPL-3.0+: [http://www.gnu.org/licenses/agpl-3.0.en.html GNU Affero General Public License (AGPL), version 3 or newer]
+* FDL-1.3: [http://www.gnu.org/licenses/fdl-1.3.en.html GNU Free Documentation License, version 1.3]
+* GPL-2.0+: [http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html GNU General Public License (GPL), version 2 or newer]
+* LGPL-2.1+: [http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html GNU Lesser General Public License (LGPL), version 2.1 or newer]
+
+====Not acceptable licenses====
+
+All licenses not explicitly included in the above lists are not acceptable terms for a Bitcoin Improvement Proposal unless a later OIP extends this one to add them.
+However, OIPs predating the acceptance of this OIP were allowed under other terms, and should use these abbreviation when no other license is granted:
+
+* OPL: [http://opencontent.org/openpub/ Open Publication License, version 1.0]
+* PD: Released into the public domain
+
+===Rationale===
+
+OIP 1 allowed the Open Publication License or releasing into the public domain; was this insufficient?
+
+* The OPL is generally regarded as obsolete, and not a license suitable for new publications.
+* Many are unfamiliar with the OPL terms, and may just prefer to use the public domain rather than license under uncertain terms.
+* The OPL license terms allowed for the author to prevent publication and derived works, which was widely considered inappropriate for Bitcoin standards.
+* Public domain is not universally recognised as a legitimate action, thus it is inadvisable.
+
+Why are there software licenses included?
+
+* Some OIPs, especially consensus layer, may include literal code in the OIP itself which may not be available under the exact license terms of the OIP.
+* Despite this, not all software licenses would be acceptable for content included in OIPs.
+
+Why is Public Domain no longer acceptable for new OIPs?
+
+* In some jurisdictions, public domain is not recognised as a legitimate legal action, leaving the OIP simply copyrighted with no redistribution or modification allowed at all.
