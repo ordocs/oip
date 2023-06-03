@@ -2,10 +2,14 @@
   OIP: 0004
   Title: Arbitrary Data Storage w/ SegWit
   Author: Psifour [psifour@luxor.tech]
-  Comments-Summary: No comments yet.
-  Comments-URI: No discussion space allocated.
+  Comments-URI: https://github.com/ordocs/oip/issues/4
   Status: Draft
-  Type: Protocol
+  Type: Standards
   Created: 2023-05-28
-  License: PD
+  License: CC0-1.0
 </pre>
+
+== Undrafted Core Concept ==
+
+Define envelopes as an arbitrary data storage format that utilizes witness date. Specifically, parse witness data for a record with the shape [OP_0, OP_IF, PUSH_DATA "ProtoID Eg. 'ord'", OP_0, ..., OP_ENDIF].
+This is sufficiently abstract enough to support many meta-protocols and flexible enough to encapsulate the Ordinal Project's Inscription data structure.
